@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_peer`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreatePeerParams {
     pub peer_section: crate::models::PeerSection,
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
@@ -27,7 +27,7 @@ pub struct CreatePeerParams {
 }
 
 /// struct for passing parameters to the method [`delete_peer`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeletePeerParams {
     /// Peer name
     pub name: String,
@@ -40,7 +40,7 @@ pub struct DeletePeerParams {
 }
 
 /// struct for passing parameters to the method [`get_peer_section`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetPeerSectionParams {
     /// Peer name
     pub name: String,
@@ -49,7 +49,7 @@ pub struct GetPeerSectionParams {
 }
 
 /// struct for passing parameters to the method [`get_peer_sections`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetPeerSectionsParams {
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
     pub transaction_id: Option<String>

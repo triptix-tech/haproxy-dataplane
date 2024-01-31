@@ -15,14 +15,14 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`get_configuration_version`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetConfigurationVersionParams {
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
     pub transaction_id: Option<String>
 }
 
 /// struct for passing parameters to the method [`get_ha_proxy_configuration`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetHaProxyConfigurationParams {
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
     pub transaction_id: Option<String>,
@@ -31,7 +31,7 @@ pub struct GetHaProxyConfigurationParams {
 }
 
 /// struct for passing parameters to the method [`post_ha_proxy_configuration`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct PostHaProxyConfigurationParams {
     pub body: String,
     /// If set, no version check will be done and the pushed config will be enforced

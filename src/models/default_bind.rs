@@ -12,7 +12,7 @@
 
 
 
-#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Default, Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct DefaultBind {
     #[serde(rename = "accept_netscaler_cip", skip_serializing_if = "Option::is_none")]
     pub accept_netscaler_cip: Option<i32>,

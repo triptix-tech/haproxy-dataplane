@@ -11,7 +11,7 @@
 
 
 
-#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Default, Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct HttpchkParams {
     #[serde(rename = "method", skip_serializing_if = "Option::is_none")]
     pub method: Option<Method>,

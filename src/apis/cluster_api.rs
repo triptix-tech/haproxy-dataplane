@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`delete_cluster`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteClusterParams {
     /// In case of moving to single mode do we keep or clean configuration
     pub configuration: Option<String>,
@@ -24,7 +24,7 @@ pub struct DeleteClusterParams {
 }
 
 /// struct for passing parameters to the method [`edit_cluster`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct EditClusterParams {
     pub cluster_settings: crate::models::ClusterSettings,
     /// Version used for checking configuration version. Cannot be used when transaction is specified, transaction has it's own version.
@@ -32,7 +32,7 @@ pub struct EditClusterParams {
 }
 
 /// struct for passing parameters to the method [`post_cluster`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct PostClusterParams {
     pub cluster_settings: crate::models::ClusterSettings,
     /// In case of moving to single mode do we keep or clean configuration

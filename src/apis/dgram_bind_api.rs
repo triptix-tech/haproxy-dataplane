@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_dgram_bind`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateDgramBindParams {
     /// Parent log forward name
     pub log_forward: String,
@@ -29,7 +29,7 @@ pub struct CreateDgramBindParams {
 }
 
 /// struct for passing parameters to the method [`delete_dgram_bind`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteDgramBindParams {
     /// Bind name
     pub name: String,
@@ -44,7 +44,7 @@ pub struct DeleteDgramBindParams {
 }
 
 /// struct for passing parameters to the method [`get_dgram_bind`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetDgramBindParams {
     /// Bind name
     pub name: String,
@@ -55,7 +55,7 @@ pub struct GetDgramBindParams {
 }
 
 /// struct for passing parameters to the method [`get_dgram_binds`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetDgramBindsParams {
     /// Parent log forward name
     pub log_forward: String,
@@ -64,7 +64,7 @@ pub struct GetDgramBindsParams {
 }
 
 /// struct for passing parameters to the method [`replace_dgram_bind`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceDgramBindParams {
     /// Bind name
     pub name: String,

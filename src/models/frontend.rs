@@ -10,7 +10,7 @@
 
 /// Frontend : HAProxy frontend configuration
 
-#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Default, Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Frontend {
     #[serde(
         rename = "accept_invalid_http_request",

@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_http_after_response_rule`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateHttpAfterResponseRuleParams {
     /// Parent name
     pub parent_name: String,
@@ -31,7 +31,7 @@ pub struct CreateHttpAfterResponseRuleParams {
 }
 
 /// struct for passing parameters to the method [`delete_http_after_response_rule`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteHttpAfterResponseRuleParams {
     /// HTTP After Response Rule Index
     pub index: i32,
@@ -48,7 +48,7 @@ pub struct DeleteHttpAfterResponseRuleParams {
 }
 
 /// struct for passing parameters to the method [`get_http_after_response_rule`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetHttpAfterResponseRuleParams {
     /// HTTP After Response Rule Index
     pub index: i32,
@@ -61,7 +61,7 @@ pub struct GetHttpAfterResponseRuleParams {
 }
 
 /// struct for passing parameters to the method [`get_http_after_response_rules`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetHttpAfterResponseRulesParams {
     /// Parent name
     pub parent_name: String,
@@ -72,7 +72,7 @@ pub struct GetHttpAfterResponseRulesParams {
 }
 
 /// struct for passing parameters to the method [`replace_http_after_response_rule`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceHttpAfterResponseRuleParams {
     /// HTTP After Response Rule Index
     pub index: i32,

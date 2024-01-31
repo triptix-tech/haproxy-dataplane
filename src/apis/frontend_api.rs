@@ -14,7 +14,7 @@ use super::{configuration, Error};
 use crate::apis::ResponseContent;
 
 /// struct for passing parameters to the method [`create_frontend`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateFrontendParams {
     pub frontend: crate::models::Frontend,
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
@@ -26,7 +26,7 @@ pub struct CreateFrontendParams {
 }
 
 /// struct for passing parameters to the method [`delete_frontend`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteFrontendParams {
     /// Frontend name
     pub name: String,
@@ -39,7 +39,7 @@ pub struct DeleteFrontendParams {
 }
 
 /// struct for passing parameters to the method [`get_frontend`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetFrontendParams {
     /// Frontend name
     pub name: String,
@@ -48,14 +48,14 @@ pub struct GetFrontendParams {
 }
 
 /// struct for passing parameters to the method [`get_frontends`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetFrontendsParams {
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
     pub transaction_id: Option<String>,
 }
 
 /// struct for passing parameters to the method [`replace_frontend`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceFrontendParams {
     /// Frontend name
     pub name: String,

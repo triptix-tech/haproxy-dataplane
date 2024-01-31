@@ -11,7 +11,7 @@
 
 
 
-#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Default, Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Capture {
     #[serde(rename = "index", deserialize_with = "Option::deserialize")]
     pub index: Option<i32>,

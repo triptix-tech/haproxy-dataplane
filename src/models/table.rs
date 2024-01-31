@@ -11,7 +11,7 @@
 
 
 
-#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Default, Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Table {
     #[serde(rename = "expire", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
     pub expire: Option<Option<String>>,

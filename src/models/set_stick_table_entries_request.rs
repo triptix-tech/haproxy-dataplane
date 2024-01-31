@@ -11,7 +11,7 @@
 
 
 
-#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Default, Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct SetStickTableEntriesRequest {
     #[serde(rename = "data_type")]
     pub data_type: Box<crate::models::StickTableEntry>,

@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`commit_transaction`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CommitTransactionParams {
     /// Transaction id
     pub id: String,
@@ -24,28 +24,28 @@ pub struct CommitTransactionParams {
 }
 
 /// struct for passing parameters to the method [`delete_transaction`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteTransactionParams {
     /// Transaction id
     pub id: String
 }
 
 /// struct for passing parameters to the method [`get_transaction`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetTransactionParams {
     /// Transaction id
     pub id: String
 }
 
 /// struct for passing parameters to the method [`get_transactions`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetTransactionsParams {
     /// Filter by transaction status
     pub status: Option<String>
 }
 
 /// struct for passing parameters to the method [`start_transaction`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct StartTransactionParams {
     /// Configuration version on which to work on
     pub version: i32

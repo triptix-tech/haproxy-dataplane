@@ -12,7 +12,7 @@
 
 
 
-#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Default, Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Info {
     #[serde(rename = "api", skip_serializing_if = "Option::is_none")]
     pub api: Option<Box<crate::models::InfoApi>>,

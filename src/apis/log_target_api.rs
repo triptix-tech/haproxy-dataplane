@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_log_target`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateLogTargetParams {
     /// Parent type
     pub parent_type: String,
@@ -31,7 +31,7 @@ pub struct CreateLogTargetParams {
 }
 
 /// struct for passing parameters to the method [`delete_log_target`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteLogTargetParams {
     /// Log Target Index
     pub index: i32,
@@ -48,7 +48,7 @@ pub struct DeleteLogTargetParams {
 }
 
 /// struct for passing parameters to the method [`get_log_target`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetLogTargetParams {
     /// Log Target Index
     pub index: i32,
@@ -61,7 +61,7 @@ pub struct GetLogTargetParams {
 }
 
 /// struct for passing parameters to the method [`get_log_targets`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetLogTargetsParams {
     /// Parent type
     pub parent_type: String,
@@ -72,7 +72,7 @@ pub struct GetLogTargetsParams {
 }
 
 /// struct for passing parameters to the method [`replace_log_target`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceLogTargetParams {
     /// Log Target Index
     pub index: i32,

@@ -11,7 +11,7 @@
 
 
 
-#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Default, Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Cookie {
     #[serde(rename = "attr", skip_serializing_if = "Option::is_none")]
     pub attr: Option<Vec<crate::models::CookieAttrInner>>,

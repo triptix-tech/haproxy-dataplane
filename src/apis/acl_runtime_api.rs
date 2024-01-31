@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`add_entry_to_acl`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct AddEntryToAclParams {
     /// ACL ID
     pub acl_id: String,
@@ -23,7 +23,7 @@ pub struct AddEntryToAclParams {
 }
 
 /// struct for passing parameters to the method [`add_payload_runtime_acl`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct AddPayloadRuntimeAclParams {
     /// ACL ID
     pub acl_id: String,
@@ -31,7 +31,7 @@ pub struct AddPayloadRuntimeAclParams {
 }
 
 /// struct for passing parameters to the method [`delete_entry_from_acl`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteEntryFromAclParams {
     /// ACL ID
     pub acl_id: String,
@@ -40,21 +40,21 @@ pub struct DeleteEntryFromAclParams {
 }
 
 /// struct for passing parameters to the method [`get_acl_file`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetAclFileParams {
     /// ACL file entry ID
     pub id: String
 }
 
 /// struct for passing parameters to the method [`get_acl_runtime_setting`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetAclRuntimeSettingParams {
     /// ACL ID
     pub acl_id: String
 }
 
 /// struct for passing parameters to the method [`get_entry_from_acl`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetEntryFromAclParams {
     /// ACL ID
     pub acl_id: String,

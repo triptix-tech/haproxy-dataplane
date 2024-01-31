@@ -11,7 +11,7 @@
 
 
 
-#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Default, Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct InfoApi {
     /// HAProxy Dataplane API build date
     #[serde(rename = "build_date", skip_serializing_if = "Option::is_none")]

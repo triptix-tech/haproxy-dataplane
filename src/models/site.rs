@@ -12,7 +12,7 @@
 
 
 
-#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Default, Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Site {
     #[serde(rename = "farms", skip_serializing_if = "Option::is_none")]
     pub farms: Option<Vec<crate::models::SiteFarmsInner>>,

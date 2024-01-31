@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_program`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateProgramParams {
     pub program: crate::models::Program,
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
@@ -27,7 +27,7 @@ pub struct CreateProgramParams {
 }
 
 /// struct for passing parameters to the method [`delete_program`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteProgramParams {
     /// Program name
     pub name: String,
@@ -40,7 +40,7 @@ pub struct DeleteProgramParams {
 }
 
 /// struct for passing parameters to the method [`get_program`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetProgramParams {
     /// Program name
     pub name: String,
@@ -49,14 +49,14 @@ pub struct GetProgramParams {
 }
 
 /// struct for passing parameters to the method [`get_programs`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetProgramsParams {
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
     pub transaction_id: Option<String>
 }
 
 /// struct for passing parameters to the method [`replace_program`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceProgramParams {
     /// Program name
     pub name: String,

@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_resolver`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateResolverParams {
     pub resolver: crate::models::Resolver,
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
@@ -27,7 +27,7 @@ pub struct CreateResolverParams {
 }
 
 /// struct for passing parameters to the method [`delete_resolver`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteResolverParams {
     /// Resolver name
     pub name: String,
@@ -40,7 +40,7 @@ pub struct DeleteResolverParams {
 }
 
 /// struct for passing parameters to the method [`get_resolver`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetResolverParams {
     /// Resolver name
     pub name: String,
@@ -49,14 +49,14 @@ pub struct GetResolverParams {
 }
 
 /// struct for passing parameters to the method [`get_resolvers`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetResolversParams {
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
     pub transaction_id: Option<String>
 }
 
 /// struct for passing parameters to the method [`replace_resolver`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceResolverParams {
     /// Resolver name
     pub name: String,

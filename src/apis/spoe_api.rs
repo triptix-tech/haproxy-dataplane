@@ -15,14 +15,14 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_spoe`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateSpoeParams {
     /// The spoe file to upload
     pub file_upload: Option<std::path::PathBuf>
 }
 
 /// struct for passing parameters to the method [`create_spoe_agent`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateSpoeAgentParams {
     /// Spoe file name
     pub spoe: String,
@@ -36,7 +36,7 @@ pub struct CreateSpoeAgentParams {
 }
 
 /// struct for passing parameters to the method [`create_spoe_group`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateSpoeGroupParams {
     /// Spoe file name
     pub spoe: String,
@@ -50,7 +50,7 @@ pub struct CreateSpoeGroupParams {
 }
 
 /// struct for passing parameters to the method [`create_spoe_message`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateSpoeMessageParams {
     /// Spoe file name
     pub spoe: String,
@@ -64,7 +64,7 @@ pub struct CreateSpoeMessageParams {
 }
 
 /// struct for passing parameters to the method [`create_spoe_scope`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateSpoeScopeParams {
     /// Spoe file name
     pub spoe: String,
@@ -76,7 +76,7 @@ pub struct CreateSpoeScopeParams {
 }
 
 /// struct for passing parameters to the method [`delete_spoe_agent`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteSpoeAgentParams {
     /// Spoe file name
     pub spoe: String,
@@ -91,14 +91,14 @@ pub struct DeleteSpoeAgentParams {
 }
 
 /// struct for passing parameters to the method [`delete_spoe_file`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteSpoeFileParams {
     /// SPOE file name
     pub name: String
 }
 
 /// struct for passing parameters to the method [`delete_spoe_group`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteSpoeGroupParams {
     /// Spoe file name
     pub spoe: String,
@@ -113,7 +113,7 @@ pub struct DeleteSpoeGroupParams {
 }
 
 /// struct for passing parameters to the method [`delete_spoe_message`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteSpoeMessageParams {
     /// Spoe file name
     pub spoe: String,
@@ -128,7 +128,7 @@ pub struct DeleteSpoeMessageParams {
 }
 
 /// struct for passing parameters to the method [`delete_spoe_scope`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteSpoeScopeParams {
     /// Spoe file name
     pub spoe: String,
@@ -141,14 +141,14 @@ pub struct DeleteSpoeScopeParams {
 }
 
 /// struct for passing parameters to the method [`get_one_spoe_file`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetOneSpoeFileParams {
     /// SPOE file name
     pub name: String
 }
 
 /// struct for passing parameters to the method [`get_spoe_agent`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetSpoeAgentParams {
     /// Spoe file name
     pub spoe: String,
@@ -161,7 +161,7 @@ pub struct GetSpoeAgentParams {
 }
 
 /// struct for passing parameters to the method [`get_spoe_agents`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetSpoeAgentsParams {
     /// Spoe file name
     pub spoe: String,
@@ -172,7 +172,7 @@ pub struct GetSpoeAgentsParams {
 }
 
 /// struct for passing parameters to the method [`get_spoe_configuration_version`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetSpoeConfigurationVersionParams {
     /// Spoe file name
     pub spoe: String,
@@ -181,7 +181,7 @@ pub struct GetSpoeConfigurationVersionParams {
 }
 
 /// struct for passing parameters to the method [`get_spoe_group`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetSpoeGroupParams {
     /// Spoe file name
     pub spoe: String,
@@ -194,7 +194,7 @@ pub struct GetSpoeGroupParams {
 }
 
 /// struct for passing parameters to the method [`get_spoe_groups`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetSpoeGroupsParams {
     /// Spoe file name
     pub spoe: String,
@@ -205,7 +205,7 @@ pub struct GetSpoeGroupsParams {
 }
 
 /// struct for passing parameters to the method [`get_spoe_message`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetSpoeMessageParams {
     /// Spoe file name
     pub spoe: String,
@@ -218,7 +218,7 @@ pub struct GetSpoeMessageParams {
 }
 
 /// struct for passing parameters to the method [`get_spoe_messages`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetSpoeMessagesParams {
     /// Spoe file name
     pub spoe: String,
@@ -229,7 +229,7 @@ pub struct GetSpoeMessagesParams {
 }
 
 /// struct for passing parameters to the method [`get_spoe_scope`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetSpoeScopeParams {
     /// Spoe file name
     pub spoe: String,
@@ -240,7 +240,7 @@ pub struct GetSpoeScopeParams {
 }
 
 /// struct for passing parameters to the method [`get_spoe_scopes`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetSpoeScopesParams {
     /// Spoe file name
     pub spoe: String,
@@ -249,7 +249,7 @@ pub struct GetSpoeScopesParams {
 }
 
 /// struct for passing parameters to the method [`replace_spoe_agent`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceSpoeAgentParams {
     /// Spoe file name
     pub spoe: String,
@@ -265,7 +265,7 @@ pub struct ReplaceSpoeAgentParams {
 }
 
 /// struct for passing parameters to the method [`replace_spoe_group`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceSpoeGroupParams {
     /// Spoe file name
     pub spoe: String,
@@ -281,7 +281,7 @@ pub struct ReplaceSpoeGroupParams {
 }
 
 /// struct for passing parameters to the method [`replace_spoe_message`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceSpoeMessageParams {
     /// Spoe file name
     pub spoe: String,

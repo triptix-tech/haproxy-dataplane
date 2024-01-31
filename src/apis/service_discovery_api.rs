@@ -15,47 +15,47 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_aws_region`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateAwsRegionParams {
     pub aws_region: crate::models::AwsRegion
 }
 
 /// struct for passing parameters to the method [`create_consul`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateConsulParams {
     pub consul: crate::models::Consul
 }
 
 /// struct for passing parameters to the method [`delete_aws_region`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteAwsRegionParams {
     /// AWS region ID
     pub id: String
 }
 
 /// struct for passing parameters to the method [`delete_consul`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteConsulParams {
     /// Consul server Index
     pub id: String
 }
 
 /// struct for passing parameters to the method [`get_aws_region`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetAwsRegionParams {
     /// AWS region id
     pub id: String
 }
 
 /// struct for passing parameters to the method [`get_consul`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetConsulParams {
     /// Consul server id
     pub id: String
 }
 
 /// struct for passing parameters to the method [`replace_aws_region`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceAwsRegionParams {
     /// AWS Region ID
     pub id: String,
@@ -63,7 +63,7 @@ pub struct ReplaceAwsRegionParams {
 }
 
 /// struct for passing parameters to the method [`replace_consul`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceConsulParams {
     /// Consul Index
     pub id: String,

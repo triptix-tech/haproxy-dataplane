@@ -15,14 +15,14 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`get_global`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetGlobalParams {
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
     pub transaction_id: Option<String>
 }
 
 /// struct for passing parameters to the method [`replace_global`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceGlobalParams {
     pub global: crate::models::Global,
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.

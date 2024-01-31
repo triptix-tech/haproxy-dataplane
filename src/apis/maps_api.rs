@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`add_map_entry`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct AddMapEntryParams {
     /// Mapfile attribute storage_name
     pub map: String,
@@ -25,7 +25,7 @@ pub struct AddMapEntryParams {
 }
 
 /// struct for passing parameters to the method [`add_payload_runtime_map`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct AddPayloadRuntimeMapParams {
     /// Map file name
     pub name: String,
@@ -35,7 +35,7 @@ pub struct AddPayloadRuntimeMapParams {
 }
 
 /// struct for passing parameters to the method [`clear_runtime_map`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ClearRuntimeMapParams {
     /// Map file name
     pub name: String,
@@ -46,7 +46,7 @@ pub struct ClearRuntimeMapParams {
 }
 
 /// struct for passing parameters to the method [`delete_runtime_map_entry`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteRuntimeMapEntryParams {
     /// Map id
     pub id: String,
@@ -57,21 +57,21 @@ pub struct DeleteRuntimeMapEntryParams {
 }
 
 /// struct for passing parameters to the method [`get_all_runtime_map_files`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetAllRuntimeMapFilesParams {
     /// If true, also show unmanaged map files loaded in haproxy
     pub include_unmanaged: Option<bool>
 }
 
 /// struct for passing parameters to the method [`get_one_runtime_map`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetOneRuntimeMapParams {
     /// Map file name
     pub name: String
 }
 
 /// struct for passing parameters to the method [`get_runtime_map_entry`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetRuntimeMapEntryParams {
     /// Map id
     pub id: String,
@@ -80,7 +80,7 @@ pub struct GetRuntimeMapEntryParams {
 }
 
 /// struct for passing parameters to the method [`replace_runtime_map_entry`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceRuntimeMapEntryParams {
     /// Map id
     pub id: String,
@@ -92,7 +92,7 @@ pub struct ReplaceRuntimeMapEntryParams {
 }
 
 /// struct for passing parameters to the method [`show_runtime_map`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ShowRuntimeMapParams {
     /// Mapfile attribute storage_name
     pub map: String

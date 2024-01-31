@@ -12,7 +12,7 @@
 
 
 
-#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Default, Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Error {
     #[serde(rename = "code", deserialize_with = "Option::deserialize")]
     pub code: Option<i32>,

@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_user`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateUserParams {
     /// Parent userlist name
     pub userlist: String,
@@ -29,7 +29,7 @@ pub struct CreateUserParams {
 }
 
 /// struct for passing parameters to the method [`delete_user`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteUserParams {
     /// User username
     pub username: String,
@@ -44,7 +44,7 @@ pub struct DeleteUserParams {
 }
 
 /// struct for passing parameters to the method [`get_user`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetUserParams {
     /// User username
     pub username: String,
@@ -55,7 +55,7 @@ pub struct GetUserParams {
 }
 
 /// struct for passing parameters to the method [`get_users`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetUsersParams {
     /// Parent userlist name
     pub userlist: String,
@@ -64,7 +64,7 @@ pub struct GetUsersParams {
 }
 
 /// struct for passing parameters to the method [`replace_user`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceUserParams {
     /// User username
     pub username: String,

@@ -12,7 +12,7 @@
 
 
 
-#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Default, Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Backend {
     #[serde(rename = "abortonclose", skip_serializing_if = "Option::is_none")]
     pub abortonclose: Option<Abortonclose>,

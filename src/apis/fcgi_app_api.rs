@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_fcgi_app`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateFcgiAppParams {
     pub fcgi_app: crate::models::FcgiApp,
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
@@ -27,7 +27,7 @@ pub struct CreateFcgiAppParams {
 }
 
 /// struct for passing parameters to the method [`delete_fcgi_app`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteFcgiAppParams {
     /// Application name
     pub name: String,
@@ -40,7 +40,7 @@ pub struct DeleteFcgiAppParams {
 }
 
 /// struct for passing parameters to the method [`get_fcgi_app`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetFcgiAppParams {
     /// Application name
     pub name: String,
@@ -49,14 +49,14 @@ pub struct GetFcgiAppParams {
 }
 
 /// struct for passing parameters to the method [`get_fcgi_apps`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetFcgiAppsParams {
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
     pub transaction_id: Option<String>
 }
 
 /// struct for passing parameters to the method [`replace_fcgi_app`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceFcgiAppParams {
     /// Application name
     pub name: String,

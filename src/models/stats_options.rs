@@ -11,7 +11,7 @@
 
 
 
-#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Default, Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct StatsOptions {
     #[serde(rename = "stats_admin", skip_serializing_if = "Option::is_none")]
     pub stats_admin: Option<bool>,

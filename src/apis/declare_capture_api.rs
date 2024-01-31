@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_declare_capture`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateDeclareCaptureParams {
     /// Parent frontend name
     pub frontend: String,
@@ -29,7 +29,7 @@ pub struct CreateDeclareCaptureParams {
 }
 
 /// struct for passing parameters to the method [`delete_declare_capture`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteDeclareCaptureParams {
     /// Declare Capture Index
     pub index: i32,
@@ -44,7 +44,7 @@ pub struct DeleteDeclareCaptureParams {
 }
 
 /// struct for passing parameters to the method [`get_declare_capture`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetDeclareCaptureParams {
     /// Declare Capture Index
     pub index: i32,
@@ -55,7 +55,7 @@ pub struct GetDeclareCaptureParams {
 }
 
 /// struct for passing parameters to the method [`get_declare_captures`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetDeclareCapturesParams {
     /// Parent frontend name
     pub frontend: String,
@@ -64,7 +64,7 @@ pub struct GetDeclareCapturesParams {
 }
 
 /// struct for passing parameters to the method [`replace_declare_capture`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceDeclareCaptureParams {
     /// Declare Capture Index
     pub index: i32,

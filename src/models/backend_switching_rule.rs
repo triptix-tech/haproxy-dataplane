@@ -12,7 +12,7 @@
 
 
 
-#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Default, Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct BackendSwitchingRule {
     #[serde(rename = "cond", skip_serializing_if = "Option::is_none")]
     pub cond: Option<Cond>,

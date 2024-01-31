@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_log_forward`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateLogForwardParams {
     pub log_forward: crate::models::LogForward,
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
@@ -27,7 +27,7 @@ pub struct CreateLogForwardParams {
 }
 
 /// struct for passing parameters to the method [`delete_log_forward`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteLogForwardParams {
     /// Log Forward name
     pub name: String,
@@ -40,7 +40,7 @@ pub struct DeleteLogForwardParams {
 }
 
 /// struct for passing parameters to the method [`get_log_forward`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetLogForwardParams {
     /// Log Forward name
     pub name: String,
@@ -49,14 +49,14 @@ pub struct GetLogForwardParams {
 }
 
 /// struct for passing parameters to the method [`get_log_forwards`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetLogForwardsParams {
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
     pub transaction_id: Option<String>
 }
 
 /// struct for passing parameters to the method [`replace_log_forward`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceLogForwardParams {
     /// Log Forward name
     pub name: String,

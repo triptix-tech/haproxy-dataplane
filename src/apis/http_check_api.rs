@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_http_check`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateHttpCheckParams {
     /// Parent type
     pub parent_type: String,
@@ -31,7 +31,7 @@ pub struct CreateHttpCheckParams {
 }
 
 /// struct for passing parameters to the method [`delete_http_check`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteHttpCheckParams {
     /// HTTP check Index
     pub index: i32,
@@ -48,7 +48,7 @@ pub struct DeleteHttpCheckParams {
 }
 
 /// struct for passing parameters to the method [`get_http_check`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetHttpCheckParams {
     /// HTTP Check Index
     pub index: i32,
@@ -61,7 +61,7 @@ pub struct GetHttpCheckParams {
 }
 
 /// struct for passing parameters to the method [`get_http_checks`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetHttpChecksParams {
     /// Parent type
     pub parent_type: String,
@@ -72,7 +72,7 @@ pub struct GetHttpChecksParams {
 }
 
 /// struct for passing parameters to the method [`replace_http_check`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceHttpCheckParams {
     /// HTTP Check Index
     pub index: i32,

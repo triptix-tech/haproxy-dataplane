@@ -12,7 +12,7 @@
 
 
 
-#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Default, Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Filter {
     /// Name of the fcgi-app section this filter will use.
     #[serde(rename = "app_name", skip_serializing_if = "Option::is_none")]

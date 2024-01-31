@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`get_stats`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetStatsParams {
     /// Object type to get stats for (one of frontend, backend, server)
     pub r#type: Option<String>,

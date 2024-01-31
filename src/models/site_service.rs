@@ -11,7 +11,7 @@
 
 
 
-#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Default, Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct SiteService {
     #[serde(rename = "http_connection_mode", skip_serializing_if = "Option::is_none")]
     pub http_connection_mode: Option<HttpConnectionMode>,

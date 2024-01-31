@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_filter`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateFilterParams {
     /// Parent name
     pub parent_name: String,
@@ -31,7 +31,7 @@ pub struct CreateFilterParams {
 }
 
 /// struct for passing parameters to the method [`delete_filter`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteFilterParams {
     /// Filter Index
     pub index: i32,
@@ -48,7 +48,7 @@ pub struct DeleteFilterParams {
 }
 
 /// struct for passing parameters to the method [`get_filter`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetFilterParams {
     /// Filter Index
     pub index: i32,
@@ -61,7 +61,7 @@ pub struct GetFilterParams {
 }
 
 /// struct for passing parameters to the method [`get_filters`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetFiltersParams {
     /// Parent name
     pub parent_name: String,
@@ -72,7 +72,7 @@ pub struct GetFiltersParams {
 }
 
 /// struct for passing parameters to the method [`replace_filter`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceFilterParams {
     /// Filter Index
     pub index: i32,

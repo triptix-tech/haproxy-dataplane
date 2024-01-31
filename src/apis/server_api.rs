@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`add_runtime_server`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct AddRuntimeServerParams {
     /// Parent backend name
     pub backend: String,
@@ -23,7 +23,7 @@ pub struct AddRuntimeServerParams {
 }
 
 /// struct for passing parameters to the method [`create_server`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateServerParams {
     pub server: crate::models::Server,
     /// Parent backend name
@@ -41,7 +41,7 @@ pub struct CreateServerParams {
 }
 
 /// struct for passing parameters to the method [`delete_runtime_server`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteRuntimeServerParams {
     /// Server name
     pub name: String,
@@ -50,7 +50,7 @@ pub struct DeleteRuntimeServerParams {
 }
 
 /// struct for passing parameters to the method [`delete_server`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteServerParams {
     /// Server name
     pub name: String,
@@ -69,7 +69,7 @@ pub struct DeleteServerParams {
 }
 
 /// struct for passing parameters to the method [`get_runtime_server`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetRuntimeServerParams {
     /// Server name
     pub name: String,
@@ -78,14 +78,14 @@ pub struct GetRuntimeServerParams {
 }
 
 /// struct for passing parameters to the method [`get_runtime_servers`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetRuntimeServersParams {
     /// Parent backend name
     pub backend: String
 }
 
 /// struct for passing parameters to the method [`get_server`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetServerParams {
     /// Server name
     pub name: String,
@@ -100,7 +100,7 @@ pub struct GetServerParams {
 }
 
 /// struct for passing parameters to the method [`get_servers`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetServersParams {
     /// Parent backend name
     pub backend: Option<String>,
@@ -113,7 +113,7 @@ pub struct GetServersParams {
 }
 
 /// struct for passing parameters to the method [`replace_runtime_server`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceRuntimeServerParams {
     /// Server name
     pub name: String,
@@ -123,7 +123,7 @@ pub struct ReplaceRuntimeServerParams {
 }
 
 /// struct for passing parameters to the method [`replace_server`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceServerParams {
     /// Server name
     pub name: String,

@@ -11,7 +11,7 @@
 
 
 
-#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Default, Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct GlobalSslEnginesInner {
     #[serde(rename = "algorithms", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
     pub algorithms: Option<Option<String>>,

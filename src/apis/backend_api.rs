@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_backend`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateBackendParams {
     pub backend: crate::models::Backend,
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
@@ -27,7 +27,7 @@ pub struct CreateBackendParams {
 }
 
 /// struct for passing parameters to the method [`delete_backend`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteBackendParams {
     /// Backend name
     pub name: String,
@@ -40,7 +40,7 @@ pub struct DeleteBackendParams {
 }
 
 /// struct for passing parameters to the method [`get_backend`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetBackendParams {
     /// Backend name
     pub name: String,
@@ -49,14 +49,14 @@ pub struct GetBackendParams {
 }
 
 /// struct for passing parameters to the method [`get_backends`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetBackendsParams {
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
     pub transaction_id: Option<String>
 }
 
 /// struct for passing parameters to the method [`replace_backend`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceBackendParams {
     /// Backend name
     pub name: String,

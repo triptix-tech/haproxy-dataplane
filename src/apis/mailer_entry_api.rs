@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_mailer_entry`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateMailerEntryParams {
     /// Parent mailers section name
     pub mailers_section: String,
@@ -29,7 +29,7 @@ pub struct CreateMailerEntryParams {
 }
 
 /// struct for passing parameters to the method [`delete_mailer_entry`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteMailerEntryParams {
     /// MailerEntry name
     pub name: String,
@@ -44,7 +44,7 @@ pub struct DeleteMailerEntryParams {
 }
 
 /// struct for passing parameters to the method [`get_mailer_entries`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetMailerEntriesParams {
     /// Parent mailers section name
     pub mailers_section: String,
@@ -53,7 +53,7 @@ pub struct GetMailerEntriesParams {
 }
 
 /// struct for passing parameters to the method [`get_mailer_entry`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetMailerEntryParams {
     /// MailerEntry name
     pub name: String,
@@ -64,7 +64,7 @@ pub struct GetMailerEntryParams {
 }
 
 /// struct for passing parameters to the method [`replace_mailer_entry`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceMailerEntryParams {
     /// MailerEntry name
     pub name: String,

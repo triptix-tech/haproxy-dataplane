@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_cache`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateCacheParams {
     pub cache: crate::models::Cache,
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
@@ -27,7 +27,7 @@ pub struct CreateCacheParams {
 }
 
 /// struct for passing parameters to the method [`delete_cache`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteCacheParams {
     /// Cache name
     pub name: String,
@@ -40,7 +40,7 @@ pub struct DeleteCacheParams {
 }
 
 /// struct for passing parameters to the method [`get_cache`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetCacheParams {
     /// Cache name
     pub name: String,
@@ -49,14 +49,14 @@ pub struct GetCacheParams {
 }
 
 /// struct for passing parameters to the method [`get_caches`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetCachesParams {
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
     pub transaction_id: Option<String>
 }
 
 /// struct for passing parameters to the method [`replace_cache`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceCacheParams {
     /// Cache name
     pub name: String,

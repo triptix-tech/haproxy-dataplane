@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_server_template`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateServerTemplateParams {
     /// Parent backend name
     pub backend: String,
@@ -29,7 +29,7 @@ pub struct CreateServerTemplateParams {
 }
 
 /// struct for passing parameters to the method [`delete_server_template`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteServerTemplateParams {
     /// Server template prefix
     pub prefix: String,
@@ -44,7 +44,7 @@ pub struct DeleteServerTemplateParams {
 }
 
 /// struct for passing parameters to the method [`get_server_template`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetServerTemplateParams {
     /// Server template prefix
     pub prefix: String,
@@ -55,7 +55,7 @@ pub struct GetServerTemplateParams {
 }
 
 /// struct for passing parameters to the method [`get_server_templates`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetServerTemplatesParams {
     /// Parent backend name
     pub backend: String,
@@ -64,7 +64,7 @@ pub struct GetServerTemplatesParams {
 }
 
 /// struct for passing parameters to the method [`replace_server_template`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceServerTemplateParams {
     /// Server template prefix
     pub prefix: String,

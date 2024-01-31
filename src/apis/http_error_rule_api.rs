@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_http_error_rule`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateHttpErrorRuleParams {
     /// Parent type
     pub parent_type: String,
@@ -31,7 +31,7 @@ pub struct CreateHttpErrorRuleParams {
 }
 
 /// struct for passing parameters to the method [`delete_http_error_rule`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteHttpErrorRuleParams {
     /// HTTP Error Rule Index
     pub index: i32,
@@ -48,7 +48,7 @@ pub struct DeleteHttpErrorRuleParams {
 }
 
 /// struct for passing parameters to the method [`get_http_error_rule`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetHttpErrorRuleParams {
     /// HTTP Error Rule Index
     pub index: i32,
@@ -61,7 +61,7 @@ pub struct GetHttpErrorRuleParams {
 }
 
 /// struct for passing parameters to the method [`get_http_error_rules`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetHttpErrorRulesParams {
     /// Parent type
     pub parent_type: String,
@@ -72,7 +72,7 @@ pub struct GetHttpErrorRulesParams {
 }
 
 /// struct for passing parameters to the method [`replace_http_error_rule`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceHttpErrorRuleParams {
     /// HTTP Error Rule Index
     pub index: i32,

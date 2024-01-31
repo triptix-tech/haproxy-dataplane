@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_tcp_check`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateTcpCheckParams {
     /// Parent type
     pub parent_type: String,
@@ -31,7 +31,7 @@ pub struct CreateTcpCheckParams {
 }
 
 /// struct for passing parameters to the method [`delete_tcp_check`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteTcpCheckParams {
     /// TCP check Index
     pub index: i32,
@@ -48,7 +48,7 @@ pub struct DeleteTcpCheckParams {
 }
 
 /// struct for passing parameters to the method [`get_tcp_check`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetTcpCheckParams {
     /// TCP Check Index
     pub index: i32,
@@ -61,7 +61,7 @@ pub struct GetTcpCheckParams {
 }
 
 /// struct for passing parameters to the method [`get_tcp_checks`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetTcpChecksParams {
     /// Parent type
     pub parent_type: String,
@@ -72,7 +72,7 @@ pub struct GetTcpChecksParams {
 }
 
 /// struct for passing parameters to the method [`replace_tcp_check`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceTcpCheckParams {
     /// TCP Check Index
     pub index: i32,

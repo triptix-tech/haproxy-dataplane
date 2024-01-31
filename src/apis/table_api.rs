@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_table`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateTableParams {
     /// Parent peer section name
     pub peer_section: String,
@@ -29,7 +29,7 @@ pub struct CreateTableParams {
 }
 
 /// struct for passing parameters to the method [`delete_table`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteTableParams {
     /// Table name
     pub name: String,
@@ -44,7 +44,7 @@ pub struct DeleteTableParams {
 }
 
 /// struct for passing parameters to the method [`get_table`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetTableParams {
     /// Table name
     pub name: String,
@@ -55,7 +55,7 @@ pub struct GetTableParams {
 }
 
 /// struct for passing parameters to the method [`get_tables`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetTablesParams {
     /// Parent peer section name
     pub peer_section: String,
@@ -64,7 +64,7 @@ pub struct GetTablesParams {
 }
 
 /// struct for passing parameters to the method [`replace_table`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceTableParams {
     /// Table name
     pub name: String,

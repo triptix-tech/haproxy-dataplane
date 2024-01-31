@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_mailers_section`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateMailersSectionParams {
     pub mailers_section: crate::models::MailersSection,
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
@@ -27,7 +27,7 @@ pub struct CreateMailersSectionParams {
 }
 
 /// struct for passing parameters to the method [`delete_mailers_section`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteMailersSectionParams {
     /// Mailers name
     pub name: String,
@@ -40,7 +40,7 @@ pub struct DeleteMailersSectionParams {
 }
 
 /// struct for passing parameters to the method [`edit_mailers_section`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct EditMailersSectionParams {
     /// Mailers name
     pub name: String,
@@ -54,7 +54,7 @@ pub struct EditMailersSectionParams {
 }
 
 /// struct for passing parameters to the method [`get_mailers_section`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetMailersSectionParams {
     /// Mailers name
     pub name: String,
@@ -63,7 +63,7 @@ pub struct GetMailersSectionParams {
 }
 
 /// struct for passing parameters to the method [`get_mailers_sections`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetMailersSectionsParams {
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
     pub transaction_id: Option<String>

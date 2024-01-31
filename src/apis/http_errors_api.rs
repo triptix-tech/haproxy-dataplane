@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_http_errors_section`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateHttpErrorsSectionParams {
     pub http_errors_section: crate::models::HttpErrorsSection,
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
@@ -27,7 +27,7 @@ pub struct CreateHttpErrorsSectionParams {
 }
 
 /// struct for passing parameters to the method [`delete_http_errors_section`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteHttpErrorsSectionParams {
     /// http-error section name
     pub name: String,
@@ -40,7 +40,7 @@ pub struct DeleteHttpErrorsSectionParams {
 }
 
 /// struct for passing parameters to the method [`get_http_errors_section`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetHttpErrorsSectionParams {
     /// http-error section name
     pub name: String,
@@ -49,14 +49,14 @@ pub struct GetHttpErrorsSectionParams {
 }
 
 /// struct for passing parameters to the method [`get_http_errors_sections`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetHttpErrorsSectionsParams {
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
     pub transaction_id: Option<String>
 }
 
 /// struct for passing parameters to the method [`replace_http_errors_section`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceHttpErrorsSectionParams {
     /// http-error section name
     pub name: String,

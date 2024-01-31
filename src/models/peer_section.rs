@@ -12,7 +12,7 @@
 
 
 
-#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Default, Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct PeerSection {
     #[serde(rename = "default_bind", skip_serializing_if = "Option::is_none")]
     pub default_bind: Option<Box<crate::models::DefaultBind>>,

@@ -12,7 +12,7 @@
 
 
 
-#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Default, Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct HttpRequestRule {
     #[serde(rename = "acl_file", skip_serializing_if = "Option::is_none")]
     pub acl_file: Option<String>,

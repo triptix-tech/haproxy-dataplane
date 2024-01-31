@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_defaults_section`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateDefaultsSectionParams {
     pub defaults: crate::models::Defaults,
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
@@ -27,7 +27,7 @@ pub struct CreateDefaultsSectionParams {
 }
 
 /// struct for passing parameters to the method [`delete_defaults_section`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteDefaultsSectionParams {
     /// Defaults name
     pub name: String,
@@ -40,14 +40,14 @@ pub struct DeleteDefaultsSectionParams {
 }
 
 /// struct for passing parameters to the method [`get_defaults`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetDefaultsParams {
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
     pub transaction_id: Option<String>
 }
 
 /// struct for passing parameters to the method [`get_defaults_section`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetDefaultsSectionParams {
     /// Defaults name
     pub name: String,
@@ -56,14 +56,14 @@ pub struct GetDefaultsSectionParams {
 }
 
 /// struct for passing parameters to the method [`get_defaults_sections`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetDefaultsSectionsParams {
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
     pub transaction_id: Option<String>
 }
 
 /// struct for passing parameters to the method [`replace_defaults`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceDefaultsParams {
     pub defaults: crate::models::Defaults,
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
@@ -75,7 +75,7 @@ pub struct ReplaceDefaultsParams {
 }
 
 /// struct for passing parameters to the method [`replace_defaults_section`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceDefaultsSectionParams {
     /// Defaults name
     pub name: String,

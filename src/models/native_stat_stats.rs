@@ -11,7 +11,7 @@
 
 
 
-#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Default, Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct NativeStatStats {
     #[serde(rename = "act", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
     pub act: Option<Option<i32>>,

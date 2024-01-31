@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_group`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateGroupParams {
     /// Parent userlist name
     pub userlist: String,
@@ -29,7 +29,7 @@ pub struct CreateGroupParams {
 }
 
 /// struct for passing parameters to the method [`delete_group`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteGroupParams {
     /// group name
     pub name: String,
@@ -44,7 +44,7 @@ pub struct DeleteGroupParams {
 }
 
 /// struct for passing parameters to the method [`get_group`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetGroupParams {
     /// Group name
     pub name: String,
@@ -55,7 +55,7 @@ pub struct GetGroupParams {
 }
 
 /// struct for passing parameters to the method [`get_groups`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetGroupsParams {
     /// Parent userlist name
     pub userlist: String,
@@ -64,7 +64,7 @@ pub struct GetGroupsParams {
 }
 
 /// struct for passing parameters to the method [`replace_group`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceGroupParams {
     /// group name
     pub name: String,

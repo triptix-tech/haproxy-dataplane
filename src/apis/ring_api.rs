@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_ring`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateRingParams {
     pub ring: crate::models::Ring,
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
@@ -27,7 +27,7 @@ pub struct CreateRingParams {
 }
 
 /// struct for passing parameters to the method [`delete_ring`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteRingParams {
     /// Ring name
     pub name: String,
@@ -40,7 +40,7 @@ pub struct DeleteRingParams {
 }
 
 /// struct for passing parameters to the method [`get_ring`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetRingParams {
     /// Ring name
     pub name: String,
@@ -49,14 +49,14 @@ pub struct GetRingParams {
 }
 
 /// struct for passing parameters to the method [`get_rings`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetRingsParams {
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
     pub transaction_id: Option<String>
 }
 
 /// struct for passing parameters to the method [`replace_ring`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceRingParams {
     /// Ring name
     pub name: String,

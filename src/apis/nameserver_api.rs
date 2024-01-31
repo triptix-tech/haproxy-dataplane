@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_nameserver`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateNameserverParams {
     /// Parent resolver name
     pub resolver: String,
@@ -29,7 +29,7 @@ pub struct CreateNameserverParams {
 }
 
 /// struct for passing parameters to the method [`delete_nameserver`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteNameserverParams {
     /// Nameserver name
     pub name: String,
@@ -44,7 +44,7 @@ pub struct DeleteNameserverParams {
 }
 
 /// struct for passing parameters to the method [`get_nameserver`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetNameserverParams {
     /// Nameserver name
     pub name: String,
@@ -55,7 +55,7 @@ pub struct GetNameserverParams {
 }
 
 /// struct for passing parameters to the method [`get_nameservers`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetNameserversParams {
     /// Parent resolver name
     pub resolver: String,
@@ -64,7 +64,7 @@ pub struct GetNameserversParams {
 }
 
 /// struct for passing parameters to the method [`replace_nameserver`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceNameserverParams {
     /// Nameserver name
     pub name: String,

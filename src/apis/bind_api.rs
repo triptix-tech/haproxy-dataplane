@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_bind`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateBindParams {
     pub bind: crate::models::Bind,
     /// Parent frontend name
@@ -33,7 +33,7 @@ pub struct CreateBindParams {
 }
 
 /// struct for passing parameters to the method [`delete_bind`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteBindParams {
     /// Bind name
     pub name: String,
@@ -52,7 +52,7 @@ pub struct DeleteBindParams {
 }
 
 /// struct for passing parameters to the method [`get_bind`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetBindParams {
     /// Bind name
     pub name: String,
@@ -67,7 +67,7 @@ pub struct GetBindParams {
 }
 
 /// struct for passing parameters to the method [`get_binds`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetBindsParams {
     /// Parent frontend name
     pub frontend: Option<String>,
@@ -80,7 +80,7 @@ pub struct GetBindsParams {
 }
 
 /// struct for passing parameters to the method [`replace_bind`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceBindParams {
     /// Bind name
     pub name: String,

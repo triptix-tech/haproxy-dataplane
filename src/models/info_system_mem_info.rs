@@ -11,7 +11,7 @@
 
 
 
-#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Default, Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct InfoSystemMemInfo {
     #[serde(rename = "dataplaneapi_memory", skip_serializing_if = "Option::is_none")]
     pub dataplaneapi_memory: Option<i32>,

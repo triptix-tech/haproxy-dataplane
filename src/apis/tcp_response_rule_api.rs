@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_tcp_response_rule`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateTcpResponseRuleParams {
     /// Parent backend name
     pub backend: String,
@@ -29,7 +29,7 @@ pub struct CreateTcpResponseRuleParams {
 }
 
 /// struct for passing parameters to the method [`delete_tcp_response_rule`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteTcpResponseRuleParams {
     /// TCP Response Rule Index
     pub index: i32,
@@ -44,7 +44,7 @@ pub struct DeleteTcpResponseRuleParams {
 }
 
 /// struct for passing parameters to the method [`get_tcp_response_rule`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetTcpResponseRuleParams {
     /// TCP Response Rule Index
     pub index: i32,
@@ -55,7 +55,7 @@ pub struct GetTcpResponseRuleParams {
 }
 
 /// struct for passing parameters to the method [`get_tcp_response_rules`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetTcpResponseRulesParams {
     /// Parent backend name
     pub backend: String,
@@ -64,7 +64,7 @@ pub struct GetTcpResponseRulesParams {
 }
 
 /// struct for passing parameters to the method [`replace_tcp_response_rule`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceTcpResponseRuleParams {
     /// TCP Response Rule Index
     pub index: i32,

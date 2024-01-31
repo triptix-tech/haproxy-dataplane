@@ -14,21 +14,21 @@ use super::{configuration, Error};
 use crate::apis::ResponseContent;
 
 /// struct for passing parameters to the method [`create_storage_general_file`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateStorageGeneralFileParams {
     /// General use file content
     pub file_upload: Option<std::path::PathBuf>,
 }
 
 /// struct for passing parameters to the method [`create_storage_map_file`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateStorageMapFileParams {
     /// The map file contents
     pub file_upload: Option<std::path::PathBuf>,
 }
 
 /// struct for passing parameters to the method [`create_storage_ssl_certificate`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateStorageSslCertificateParams {
     /// If set, do a force reload, do not wait for the configured reload-delay. Cannot be used when transaction is specified, as changes in transaction are not applied directly to configuration.
     pub force_reload: Option<bool>,
@@ -37,21 +37,21 @@ pub struct CreateStorageSslCertificateParams {
 }
 
 /// struct for passing parameters to the method [`delete_storage_general_file`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteStorageGeneralFileParams {
     /// General use file storage_name
     pub name: String,
 }
 
 /// struct for passing parameters to the method [`delete_storage_map`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteStorageMapParams {
     /// Map file storage_name
     pub name: String,
 }
 
 /// struct for passing parameters to the method [`delete_storage_ssl_certificate`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteStorageSslCertificateParams {
     /// SSL certificate name
     pub name: String,
@@ -62,28 +62,28 @@ pub struct DeleteStorageSslCertificateParams {
 }
 
 /// struct for passing parameters to the method [`get_one_storage_general_file`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetOneStorageGeneralFileParams {
     /// General use file storage_name
     pub name: String,
 }
 
 /// struct for passing parameters to the method [`get_one_storage_map`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetOneStorageMapParams {
     /// Map file storage_name
     pub name: String,
 }
 
 /// struct for passing parameters to the method [`get_one_storage_ssl_certificate`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetOneStorageSslCertificateParams {
     /// SSL certificate name
     pub name: String,
 }
 
 /// struct for passing parameters to the method [`replace_storage_general_file`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceStorageGeneralFileParams {
     /// General use file storage_name
     pub name: String,
@@ -95,7 +95,7 @@ pub struct ReplaceStorageGeneralFileParams {
 }
 
 /// struct for passing parameters to the method [`replace_storage_map_file`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceStorageMapFileParams {
     /// Map file storage_name
     pub name: String,
@@ -107,7 +107,7 @@ pub struct ReplaceStorageMapFileParams {
 }
 
 /// struct for passing parameters to the method [`replace_storage_ssl_certificate`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceStorageSslCertificateParams {
     /// SSL certificate name
     pub name: String,

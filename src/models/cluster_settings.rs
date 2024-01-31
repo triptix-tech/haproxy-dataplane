@@ -12,7 +12,7 @@
 
 
 
-#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Default, Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct ClusterSettings {
     #[serde(rename = "bootstrap_key", skip_serializing_if = "Option::is_none")]
     pub bootstrap_key: Option<String>,

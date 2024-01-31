@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`get_stick_table`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetStickTableParams {
     /// Stick table name
     pub name: String,
@@ -24,7 +24,7 @@ pub struct GetStickTableParams {
 }
 
 /// struct for passing parameters to the method [`get_stick_table_entries`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetStickTableEntriesParams {
     /// Stick table name
     pub stick_table: String,
@@ -41,14 +41,14 @@ pub struct GetStickTableEntriesParams {
 }
 
 /// struct for passing parameters to the method [`get_stick_tables`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetStickTablesParams {
     /// Process number if master-worker mode, if not all processes are returned
     pub process: Option<i32>
 }
 
 /// struct for passing parameters to the method [`set_stick_table_entries`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct SetStickTableEntriesParams {
     /// Stick table name
     pub stick_table: String,

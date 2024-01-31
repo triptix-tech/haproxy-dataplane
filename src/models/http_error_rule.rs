@@ -12,7 +12,7 @@
 
 
 
-#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Default, Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct HttpErrorRule {
     #[serde(rename = "index", deserialize_with = "Option::deserialize")]
     pub index: Option<i32>,

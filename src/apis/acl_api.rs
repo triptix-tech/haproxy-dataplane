@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_acl`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateAclParams {
     /// Parent name
     pub parent_name: String,
@@ -31,7 +31,7 @@ pub struct CreateAclParams {
 }
 
 /// struct for passing parameters to the method [`delete_acl`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteAclParams {
     /// ACL line Index
     pub index: i32,
@@ -48,7 +48,7 @@ pub struct DeleteAclParams {
 }
 
 /// struct for passing parameters to the method [`get_acl`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetAclParams {
     /// ACL line Index
     pub index: i32,
@@ -61,7 +61,7 @@ pub struct GetAclParams {
 }
 
 /// struct for passing parameters to the method [`get_acls`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetAclsParams {
     /// Parent name
     pub parent_name: String,
@@ -74,7 +74,7 @@ pub struct GetAclsParams {
 }
 
 /// struct for passing parameters to the method [`replace_acl`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceAclParams {
     /// ACL line Index
     pub index: i32,

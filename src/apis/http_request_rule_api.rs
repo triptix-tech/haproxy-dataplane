@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_http_request_rule`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateHttpRequestRuleParams {
     /// Parent name
     pub parent_name: String,
@@ -31,7 +31,7 @@ pub struct CreateHttpRequestRuleParams {
 }
 
 /// struct for passing parameters to the method [`delete_http_request_rule`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteHttpRequestRuleParams {
     /// HTTP Request Rule Index
     pub index: i32,
@@ -48,7 +48,7 @@ pub struct DeleteHttpRequestRuleParams {
 }
 
 /// struct for passing parameters to the method [`get_http_request_rule`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetHttpRequestRuleParams {
     /// HTTP Request Rule Index
     pub index: i32,
@@ -61,7 +61,7 @@ pub struct GetHttpRequestRuleParams {
 }
 
 /// struct for passing parameters to the method [`get_http_request_rules`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetHttpRequestRulesParams {
     /// Parent name
     pub parent_name: String,
@@ -72,7 +72,7 @@ pub struct GetHttpRequestRulesParams {
 }
 
 /// struct for passing parameters to the method [`replace_http_request_rule`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceHttpRequestRuleParams {
     /// HTTP Request Rule Index
     pub index: i32,

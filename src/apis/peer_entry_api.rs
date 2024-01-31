@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_peer_entry`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreatePeerEntryParams {
     /// Parent peer section name
     pub peer_section: String,
@@ -29,7 +29,7 @@ pub struct CreatePeerEntryParams {
 }
 
 /// struct for passing parameters to the method [`delete_peer_entry`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeletePeerEntryParams {
     /// PeerEntry name
     pub name: String,
@@ -44,7 +44,7 @@ pub struct DeletePeerEntryParams {
 }
 
 /// struct for passing parameters to the method [`get_peer_entries`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetPeerEntriesParams {
     /// Parent peer section name
     pub peer_section: String,
@@ -53,7 +53,7 @@ pub struct GetPeerEntriesParams {
 }
 
 /// struct for passing parameters to the method [`get_peer_entry`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetPeerEntryParams {
     /// PeerEntry name
     pub name: String,
@@ -64,7 +64,7 @@ pub struct GetPeerEntryParams {
 }
 
 /// struct for passing parameters to the method [`replace_peer_entry`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplacePeerEntryParams {
     /// PeerEntry name
     pub name: String,

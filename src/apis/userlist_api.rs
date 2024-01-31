@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_userlist`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateUserlistParams {
     pub userlist: crate::models::Userlist,
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
@@ -27,7 +27,7 @@ pub struct CreateUserlistParams {
 }
 
 /// struct for passing parameters to the method [`delete_userlist`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteUserlistParams {
     /// Userlist name
     pub name: String,
@@ -40,7 +40,7 @@ pub struct DeleteUserlistParams {
 }
 
 /// struct for passing parameters to the method [`get_userlist`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetUserlistParams {
     /// Userlist name
     pub name: String,
@@ -49,7 +49,7 @@ pub struct GetUserlistParams {
 }
 
 /// struct for passing parameters to the method [`get_userlists`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetUserlistsParams {
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
     pub transaction_id: Option<String>

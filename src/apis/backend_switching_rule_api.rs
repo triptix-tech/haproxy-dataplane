@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_backend_switching_rule`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateBackendSwitchingRuleParams {
     /// Frontend name
     pub frontend: String,
@@ -29,7 +29,7 @@ pub struct CreateBackendSwitchingRuleParams {
 }
 
 /// struct for passing parameters to the method [`delete_backend_switching_rule`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteBackendSwitchingRuleParams {
     /// Switching Rule Index
     pub index: i32,
@@ -44,7 +44,7 @@ pub struct DeleteBackendSwitchingRuleParams {
 }
 
 /// struct for passing parameters to the method [`get_backend_switching_rule`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetBackendSwitchingRuleParams {
     /// Switching Rule Index
     pub index: i32,
@@ -55,7 +55,7 @@ pub struct GetBackendSwitchingRuleParams {
 }
 
 /// struct for passing parameters to the method [`get_backend_switching_rules`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetBackendSwitchingRulesParams {
     /// Frontend name
     pub frontend: String,
@@ -64,7 +64,7 @@ pub struct GetBackendSwitchingRulesParams {
 }
 
 /// struct for passing parameters to the method [`replace_backend_switching_rule`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceBackendSwitchingRuleParams {
     /// Switching Rule Index
     pub index: i32,

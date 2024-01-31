@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`commit_spoe_transaction`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CommitSpoeTransactionParams {
     /// Spoe file name
     pub spoe: String,
@@ -26,7 +26,7 @@ pub struct CommitSpoeTransactionParams {
 }
 
 /// struct for passing parameters to the method [`delete_spoe_transaction`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteSpoeTransactionParams {
     /// Spoe file name
     pub spoe: String,
@@ -35,7 +35,7 @@ pub struct DeleteSpoeTransactionParams {
 }
 
 /// struct for passing parameters to the method [`get_spoe_transaction`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetSpoeTransactionParams {
     /// Spoe file name
     pub spoe: String,
@@ -44,7 +44,7 @@ pub struct GetSpoeTransactionParams {
 }
 
 /// struct for passing parameters to the method [`get_spoe_transactions`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetSpoeTransactionsParams {
     /// Spoe file name
     pub spoe: String,
@@ -53,7 +53,7 @@ pub struct GetSpoeTransactionsParams {
 }
 
 /// struct for passing parameters to the method [`start_spoe_transaction`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct StartSpoeTransactionParams {
     /// Spoe file name
     pub spoe: String,

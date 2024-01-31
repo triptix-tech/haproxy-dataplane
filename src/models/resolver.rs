@@ -12,7 +12,7 @@
 
 
 
-#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Default, Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Resolver {
     #[serde(rename = "accepted_payload_size", skip_serializing_if = "Option::is_none")]
     pub accepted_payload_size: Option<i32>,

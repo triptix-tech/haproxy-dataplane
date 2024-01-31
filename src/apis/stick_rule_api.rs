@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_stick_rule`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateStickRuleParams {
     /// Backend name
     pub backend: String,
@@ -29,7 +29,7 @@ pub struct CreateStickRuleParams {
 }
 
 /// struct for passing parameters to the method [`delete_stick_rule`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteStickRuleParams {
     /// Stick Rule Index
     pub index: i32,
@@ -44,7 +44,7 @@ pub struct DeleteStickRuleParams {
 }
 
 /// struct for passing parameters to the method [`get_stick_rule`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetStickRuleParams {
     /// Stick Rule Index
     pub index: i32,
@@ -55,7 +55,7 @@ pub struct GetStickRuleParams {
 }
 
 /// struct for passing parameters to the method [`get_stick_rules`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetStickRulesParams {
     /// Backend name
     pub backend: String,
@@ -64,7 +64,7 @@ pub struct GetStickRulesParams {
 }
 
 /// struct for passing parameters to the method [`replace_stick_rule`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceStickRuleParams {
     /// Stick Rule Index
     pub index: i32,

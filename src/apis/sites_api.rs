@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 /// struct for passing parameters to the method [`create_site`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct CreateSiteParams {
     pub site: crate::models::Site,
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
@@ -27,7 +27,7 @@ pub struct CreateSiteParams {
 }
 
 /// struct for passing parameters to the method [`delete_site`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct DeleteSiteParams {
     /// Site frontend name
     pub name: String,
@@ -40,7 +40,7 @@ pub struct DeleteSiteParams {
 }
 
 /// struct for passing parameters to the method [`get_site`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetSiteParams {
     /// Site frontend name
     pub name: String,
@@ -49,14 +49,14 @@ pub struct GetSiteParams {
 }
 
 /// struct for passing parameters to the method [`get_sites`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct GetSitesParams {
     /// ID of the transaction where we want to add the operation. Cannot be used when version is specified.
     pub transaction_id: Option<String>
 }
 
 /// struct for passing parameters to the method [`replace_site`]
-#[derive(Clone, Debug)]
+#[derive(Default, Clone, Debug)]
 pub struct ReplaceSiteParams {
     /// Site frontend name
     pub name: String,
